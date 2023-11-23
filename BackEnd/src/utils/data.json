@@ -2,7 +2,15 @@
   {
     "firstName": "Xuxa",
     "lastName": "Meneguel",
-    "age": "DESCONHECIDA",
-    "id": "84aa01cc-d59d-4e1e-a36a-ab1576f50d3f"
+    "age": 10293,
+    "email": "s",
+    "id": "8285ec80-8d30-4b34-a217-38b1ad155188"
+  },
+  {
+    "firstName": "NICOLAS BRITO",
+    "lastName": "CRUZ",
+    "age": "23",
+    "email": "nicolasbcruz@gmail.com",
+    "id": "ea98d032-b4ba-4b78-9a5f-fd4af03169d1"
   }
 ]
