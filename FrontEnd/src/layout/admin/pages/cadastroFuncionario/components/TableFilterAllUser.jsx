@@ -2,8 +2,8 @@ import React from 'react'
 import { useFilterAllUser } from '../hooks/useFilterAllUser'
 import { Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react'
 import { formatarDinheiro } from '../../../../../utils/masks/formataMoeda'
-import DialogEditarFuncionario from './DialogEditarFuncionario';
 import DialogApagarFuncionario from './DialogApagarFuncionario';
+import DialogEditarFuncionario from './DialogEditarFuncionario';
 
 export default function TableFilterAllUser() {
 	const filterAllUser = useFilterAllUser()
