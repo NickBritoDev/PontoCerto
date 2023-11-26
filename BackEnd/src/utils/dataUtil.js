@@ -4,7 +4,7 @@ import path from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const dataFilePath = path.join(__dirname, "data.json");
+const dataFilePath = path.join(__dirname, "funcionarios.json");
 
 export const loadData = async () => {
   try {
