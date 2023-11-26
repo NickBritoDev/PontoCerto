@@ -23,7 +23,6 @@ export const createUserService = async (user) => {
 
     return users;
   } catch (error) {
-    console.error('Error creating user:', error.message); 
-    throw error.message; 
+    throw error; 
   }
 };

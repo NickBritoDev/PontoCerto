@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import Login from '../layout/public/pages/login/index';
+
 import Logout from '../layout/public/pages/logout/index';
-import Home from '../layout/admin/Home';
 import { isAuthenticated } from '../layout/public/auth/authService';
+import Register from '../layout/public/pages/regster';
+import ConfirmEmail from '../layout/public/pages/confirmEmail';
 
 const PrivateRoute = ({ element, ...props }) => {
   return isAuthenticated() ? (
@@ -17,9 +18,9 @@ function RoutesApp() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/public/login" element={<Login />} />
+        <Route path="/public/login" element={<Register />} />
         <Route path="/public/logout" element={<Logout />} />
-        <Route path="/ponto-certo/home" element={<PrivateRoute element={<Home />} />} />
+        <Route path="/ponto-certo/home" element={<PrivateRoute element={<ConfirmEmail />} />} />
       </Routes>
     </BrowserRouter>
   );

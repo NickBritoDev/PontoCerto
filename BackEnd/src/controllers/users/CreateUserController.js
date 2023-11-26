@@ -7,7 +7,6 @@ export const createUser = async (req, res) => {
 
     res.status(201).send(users);
   } catch (error) {
-    console.error('Error creating user:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send(error);
   }
 };
