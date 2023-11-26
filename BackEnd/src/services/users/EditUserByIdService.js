@@ -11,9 +11,9 @@ export const editUserService = async (userId, updatedUserData) => {
     }
 
     // Atualiza os dados do usuário, se fornecidos
-    if (updatedUserData.firstName) userToUpdate.firstName = updatedUserData.firstName;
-    if (updatedUserData.lastName) userToUpdate.lastName = updatedUserData.lastName;
-    if (updatedUserData.age) userToUpdate.age = updatedUserData.age;
+    if (updatedUserData.primeiroNome) userToUpdate.primeiroNome = updatedUserData.primeiroNome;
+    if (updatedUserData.sobrenome) userToUpdate.sobrenome = updatedUserData.sobrenome;
+    if (updatedUserData.idade) userToUpdate.idade = updatedUserData.idade;
 
     // Salva os usuários atualizados
     await saveData(users);

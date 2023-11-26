@@ -9,9 +9,9 @@ import { useToast } from '@chakra-ui/react';
 
 const validationSchema = Yup.object({
   email: Yup.string().email('Invalid email address').required('Required'),
-  firstName: Yup.string().required('Required'),
-  lastName: Yup.string().required('Required'),
-  age: Yup.number().positive('Must be a positive number').integer('Must be an integer').required('Required'),
+  primeiroNome: Yup.string().required('Required'),
+  sobrenome: Yup.string().required('Required'),
+  idade: Yup.number().positive('Must be a positive number').integer('Must be an integer').required('Required'),
 });
 
 const FormRegister = () => {
@@ -23,11 +23,11 @@ const FormRegister = () => {
   return (
     <Box w={'450px'} border={'1px solid #ccc'} boxShadow={'lg'} p={5} margin={'5% auto'} rounded={'2xl'} display={'flex'} justifyContent={'center'} flexDir={'column'}>
       <Formik
-        initialValues={{ email: '', firstName: '', lastName: '', age: '' }}
+        initialValues={{ email: '', primeiroNome: '', sobrenome: '', idade: '' }}
         validationSchema={validationSchema}
         onSubmit={async (values, actions) => {
           try {
-            await UseRequestCreateUser(values.firstName, values.lastName, values.age, values.email);
+            await UseRequestCreateUser(values.primeiroNome, values.sobrenome, values.idade, values.email);
 
             const token = 'token_gerado_pelo_servidor';
             login(token);
@@ -58,36 +58,36 @@ const FormRegister = () => {
               )}
             </Field>
             <Flex gap={1}>
-              {/* firstName */}
-              <Field name="firstName">
+              {/* primeiroNome */}
+              <Field name="primeiroNome">
                 {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.firstName && form.touched.firstName}>
+                  <FormControl isInvalid={form.errors.primeiroNome && form.touched.primeiroNome}>
                     <FormLabel mb={-1} mt={4}>Nome:</FormLabel>
-                    <Input {...field} id="firstName" placeholder="Seu primeiro nome" />
-                    <FormErrorMessage>{form.errors.firstName}</FormErrorMessage>
+                    <Input {...field} id="primeiroNome" placeholder="Seu primeiro nome" />
+                    <FormErrorMessage>{form.errors.primeiroNome}</FormErrorMessage>
                   </FormControl>
                 )}
               </Field>
 
-              {/* lastName */}
-              <Field name="lastName">
+              {/* sobrenome */}
+              <Field name="sobrenome">
                 {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.lastName && form.touched.lastName}>
+                  <FormControl isInvalid={form.errors.sobrenome && form.touched.sobrenome}>
                     <FormLabel mb={-1} mt={4}>Sobrenome:</FormLabel>
-                    <Input {...field} id="lastName" placeholder="Seu sobrenome" />
-                    <FormErrorMessage>{form.errors.lastName}</FormErrorMessage>
+                    <Input {...field} id="sobrenome" placeholder="Seu sobrenome" />
+                    <FormErrorMessage>{form.errors.sobrenome}</FormErrorMessage>
                   </FormControl>
                 )}
               </Field>
             </Flex>
 
-            {/* age */}
-            <Field name="age">
+            {/* idade */}
+            <Field name="idade">
               {({ field, form }) => (
-                <FormControl isInvalid={form.errors.age && form.touched.age}>
+                <FormControl isInvalid={form.errors.idade && form.touched.idade}>
                   <FormLabel mb={-1} mt={4}>Idade:</FormLabel>
-                  <Input type='number' {...field} id="age" placeholder="Sua idade" maxLength={3} minLength={1} />
-                  <FormErrorMessage>{form.errors.age}</FormErrorMessage>
+                  <Input type='number' {...field} id="idade" placeholder="Sua idade" maxLength={3} minLength={1} />
+                  <FormErrorMessage>{form.errors.idade}</FormErrorMessage>
                 </FormControl>
               )}
             </Field>

@@ -13,13 +13,15 @@ const useCreateUser = () => {
 
   const mutation = useMutation(createUser);
 
-  const UseRequestCreateUser = async (primeiroNome, sobrenome, idade, email) => {
+  const UseRequestCreateUser = async (primeiroNome, sobrenome, idade, email, salario, cargo) => {
     try {
       await mutation.mutateAsync({
         primeiroNome,
         sobrenome,
         idade,
         email,
+        salario,
+        cargo
       });
     } catch (error) {
       throw error;

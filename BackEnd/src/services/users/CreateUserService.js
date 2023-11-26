@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const createUserService = async (user) => {
   try {
-    if (!user || !user.firstName || !user.lastName || !user.age || !user.email) {
+    if (!user || !user.primeiroNome || !user.sobrenome || !user.idade || !user.email) {
       throw new Error('Missing required user information.');
     }
 

@@ -2,9 +2,10 @@ import React from "react";
 import { RadioGroup, useDisclosure, Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Icon, useColorMode, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box } from '@chakra-ui/react'
 import { MdMenuOpen } from "react-icons/md";
 import { IoIosPulse } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
-
+  const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [placement, setPlacement] = React.useState('right')
   const { colorMode } = useColorMode()
@@ -27,13 +28,13 @@ export default function Sidebar() {
                 <h2>
                   <AccordionButton>
                     <Box as="span" flex='1' textAlign='left'>
-                      Controle de Cortes
+                      Controle de Funcionarios
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel display={"flex"} flexDir={"column"} pb={4} gap={2}>
-                  <Button>Histórico de Cortes</Button>
+                <Button onClick={() => navigate('/ponto-certo/controle-de-funcionarios/gerenciamento')}>Gerenciamento de Funcionarios</Button>
                   <Button>Fornecedores de Cortes</Button>
                 </AccordionPanel>
               </AccordionItem>

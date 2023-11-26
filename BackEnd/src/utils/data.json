@@ -1,23 +1,29 @@
 [
   {
-    "firstName": "NICOLAS BRITO",
-    "lastName": "CRUZ",
-    "age": 23,
-    "email": "nicolassbcruz@gmail.com",
-    "id": "1c3512f8-29df-4b0d-8832-f355583d6674"
+    "primeiroNome": "Nicolas",
+    "sobrenome": "Brito da Cruz",
+    "idade": 23,
+    "email": "nicolasbcruz@gmail.com",
+    "salario": 250,
+    "cargo": "Custureira",
+    "id": "db408ccc-bb1a-4fd8-9ef5-77e703af0089"
   },
   {
-    "firstName": "NICOLAS BRITO",
-    "lastName": "CRUZ",
-    "age": 23,
-    "email": "nicolassbscruz@gmail.com",
-    "id": "262d6faf-b3a7-4004-ba15-d8db021e6c44"
+    "primeiroNome": "Bruna",
+    "sobrenome": "Silva",
+    "idade": 24,
+    "email": "bruna.rocha.silva17@gmail.com",
+    "salario": 3450,
+    "cargo": "Custureira",
+    "id": "5a27748b-45c8-4222-b6b3-fe3aa56ec5c9"
   },
   {
-    "firstName": "NICOLAS BRITO",
-    "lastName": "CRUZ",
-    "age": 23,
-    "email": "nicolassbsscruz@gmail.com",
-    "id": "30155c25-dc71-4446-aa95-6a190c71e397"
+    "primeiroNome": "NICOLAS BRITO",
+    "sobrenome": "CRUZ",
+    "idade": 25,
+    "email": "brito08cruz@gmail.com",
+    "salario": 5452,
+    "cargo": "Custureira",
+    "id": "628f6607-f775-48a8-9cb8-cece81b5b25d"
   }
 ]

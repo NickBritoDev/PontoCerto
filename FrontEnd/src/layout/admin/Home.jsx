@@ -1,17 +1,17 @@
 // Home.jsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import Sidebar from './components/Sidebar'
 import ToggleMode from './components/ToggleMode';
 import { Flex } from '@chakra-ui/react';
-import {useAuthentication} from '../public/auth/authUtils'
+//import {useAuthentication} from '../public/auth/authUtils'
 
 export default function Home() {
-  const { setupAuthenticationInterval } = useAuthentication();
+  /*const { setupAuthenticationInterval } = useAuthentication();
 
   useEffect(() => {
     const cleanup = setupAuthenticationInterval();
     return cleanup;
-  }, [setupAuthenticationInterval]);
+  }, [setupAuthenticationInterval]);*/
 
   return (
     <>
