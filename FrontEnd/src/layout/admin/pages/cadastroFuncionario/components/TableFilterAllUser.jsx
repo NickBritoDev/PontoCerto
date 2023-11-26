@@ -35,8 +35,8 @@ export default function TableFilterAllUser() {
 							<Td>{funcionario.email}</Td>
 							<Td isNumeric>{formatarDinheiro(funcionario.salario)}</Td>
 							<Td>{funcionario.cargo}</Td>
-							<Td> <DialogEditarFuncionario /></Td>
-							<Td><DialogApagarFuncionario /></Td>
+							<Td> <DialogEditarFuncionario funcionario={funcionario} /></Td>
+							<Td><DialogApagarFuncionario id={funcionario.id} nome={funcionario.primeiroNome} sobrenome={funcionario.sobrenome}/></Td>
 						</Tr>
 					))}
 				</Tbody>

@@ -1,15 +1,16 @@
-import { AlertDialog, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Button, useDisclosure } from "@chakra-ui/react"
+import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Button, useDisclosure } from "@chakra-ui/react"
 import React from "react"
 import { FaEdit } from "react-icons/fa"
+import FormEditarFuncionario from "./FormEditarFuncionario"
 
-export default function DialogEditarFuncionario() {
+export default function DialogEditarFuncionario({funcionario}) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = React.useRef()
 
   return (
     <>
       <Button colorScheme='messenger' onClick={onOpen}>
-      <FaEdit/>
+        <FaEdit />
       </Button>
 
       <AlertDialog
@@ -20,16 +21,14 @@ export default function DialogEditarFuncionario() {
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-              Delete Customer
+              Atualize os dados do seu funcionario
             </AlertDialogHeader>
 
+            <AlertDialogBody>
+              <FormEditarFuncionario funcionario={funcionario} ref={cancelRef} onClose={onClose} />
+            </AlertDialogBody>
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme='red' onClick={onClose} ml={3}>
-                Delete
-              </Button>
+
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>

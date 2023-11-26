@@ -1,29 +1,11 @@
 [
   {
-    "primeiroNome": "Nicolas",
-    "sobrenome": "Brito da Cruz",
-    "idade": 23,
-    "email": "nicolasbcruz@gmail.com",
-    "salario": 250,
-    "cargo": "Custureira",
-    "id": "db408ccc-bb1a-4fd8-9ef5-77e703af0089"
-  },
-  {
-    "primeiroNome": "Bruna",
-    "sobrenome": "Silva",
-    "idade": 24,
-    "email": "bruna.rocha.silva17@gmail.com",
-    "salario": 3450,
-    "cargo": "Custureira",
+    "primeiroNome": "Barba",
+    "sobrenome": "Branca",
+    "idade": 69,
+    "email": "bakaxex@mailinator.com",
+    "salario": 420,
+    "cargo": "Gerente",
     "id": "5a27748b-45c8-4222-b6b3-fe3aa56ec5c9"
-  },
-  {
-    "primeiroNome": "NICOLAS BRITO",
-    "sobrenome": "CRUZ",
-    "idade": 25,
-    "email": "brito08cruz@gmail.com",
-    "salario": 5452,
-    "cargo": "Custureira",
-    "id": "628f6607-f775-48a8-9cb8-cece81b5b25d"
   }
 ]

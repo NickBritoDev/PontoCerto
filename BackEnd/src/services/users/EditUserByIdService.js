@@ -14,6 +14,10 @@ export const editUserService = async (userId, updatedUserData) => {
     if (updatedUserData.primeiroNome) userToUpdate.primeiroNome = updatedUserData.primeiroNome;
     if (updatedUserData.sobrenome) userToUpdate.sobrenome = updatedUserData.sobrenome;
     if (updatedUserData.idade) userToUpdate.idade = updatedUserData.idade;
+    if (updatedUserData.salario) userToUpdate.salario = updatedUserData.salario;
+    if (updatedUserData.cargo) userToUpdate.cargo = updatedUserData.cargo;
+    if (updatedUserData.email) userToUpdate.email = updatedUserData.email;
+
 
     // Salva os usuários atualizados
     await saveData(users);
