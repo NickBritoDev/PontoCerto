@@ -10,7 +10,7 @@ export default function TableFilterAllUser() {
 	const funcionarios = filterAllUser.data || []
 
 	return (
-		<TableContainer mt={36} w={'100%'} p={4} boxShadow={'lg'}>
+		<TableContainer mt={12} w={'100%'} p={4} boxShadow={'lg'}>
 			<Text fontSize={20} ml={2}>Gerenciamento de Funcionarios</Text>
 			<Text ml={2}>Cadastre, edite, exclua e tenha o controle de dados de seus funcionarios</Text>
 			<Table size='sm' mt={10}>
